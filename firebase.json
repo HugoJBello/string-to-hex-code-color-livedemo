@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist",
+    "public": "dist/string-to-hex-code-color-livedemo",
     "rewrites": [
       {
         "source": "**",
