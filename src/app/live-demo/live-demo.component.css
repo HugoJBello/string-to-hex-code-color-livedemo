@@ -1,0 +1,25 @@
+th{
+    padding:20px
+   }
+   
+   td{
+     padding:10px
+   }
+   pre {
+     max-width: 350px;
+     overflow-wrap: break-word;
+     white-space:pre-wrap;
+   }
+   .fork-me-badge {
+     position: absolute;
+     right: 0;
+     top: 0;
+   }
+   
+   .main-header {
+     background: #3f51b5;
+     color: #eee;
+     height: 133px;
+     margin-bottom: 50px;
+   }
+   

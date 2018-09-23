@@ -1,0 +1,93 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<header class="main-header">
+  <a href="https://github.com/HugoJBello/string-to-hex-code-color" class="fork-me-badge">
+    <img src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67"
+      alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png">
+  </a>
+
+  <div class="container">
+    <h1 class="header">string-to-hex-code-color</h1>
+    <p class="header motto">
+      <i>Convert a string into hexadecimal code color with javascript</i>
+    </p>
+
+    <!-- Place this tag where you want the button to render. -->
+    <!-- Place this tag where you want the button to render. -->
+    <a class="github-button" href="https://github.com/HugoJBello/string-to-hex-code-color" data-icon="octicon-star"
+      data-size="large" data-show-count="true" aria-label="Star ngx-string-to-css-color on GitHub">Star</a>
+
+    <!-- Place this tag where you want the button to render. -->
+    <a class="github-button" href="https://github.com/HugoJBello/string-to-hex-code-color/fork" data-icon="octicon-repo-forked"
+      data-size="large" data-show-count="true" aria-label="Fork ngx-string-to-css-color on GitHub">Fork</a>
+
+    <!-- Place this tag where you want the button to render. -->
+    <a class="github-button" href="https://github.com/HugoJBello/string-to-hex-code-color/issues" data-icon="octicon-issue-opened"
+      data-size="large" data-show-count="true" aria-label="Issue ngx-string-to-css-color on GitHub">Issue</a>
+  </div>
+</header>
+<div class="container">
+
+  <div class="starter-template">
+    <h3>Live example</h3>
+    <h4>Generate color from text</h4>
+
+    <div class="form-group">
+      <label for="textu">Add text to test</label>
+      <input [(ngModel)]="text" (keyup)="onChangeText()" class="form-control" id="textu" aria-describedby="emailHelp"
+        placeholder="Add text to test">
+    </div>
+    <br>
+    <br>
+    <table class="table">
+      <tr>
+        <th>Code</th>
+        <th>Color in hex code</th>
+        <th>Color</th>
+      </tr>
+      <tr>
+        <td>
+          <pre>{{codeStringToColorShade4}}</pre>
+        <td>{{ string2HexCodeColor.stringToColor(text, '0.2')}}</td>
+        <td>
+          <span [style.background]="string2HexCodeColor.stringToColor(text, 0.2)">____</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <pre>{{codeStringToColor}}</pre>
+        </td>
+        <td>{{ string2HexCodeColor.stringToColor(text)}}</td>
+        <td>
+          <span [style.background]="string2HexCodeColor.stringToColor(text)">____</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <pre>{{codeStringToColorShade3}}</pre>
+        </td>
+        <td>{{ string2HexCodeColor.stringToColor(text, '0')}}</td>
+        <td>
+          <span [style.background]="string2HexCodeColor.stringToColor(text, 0)">____</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <pre>{{codeStringToColorShade2}}</pre>
+        </td>
+        <td>{{ string2HexCodeColor.stringToColor(text, -0.2)}}</td>
+        <td>
+          <span [style.background]="string2HexCodeColor.stringToColor(text, -0.2)">____</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <pre>{{codeStringToColorShade1}}</pre>
+        </td>
+        <td>{{ string2HexCodeColor.stringToColor(text, -0.5)}}</td>
+        <td>
+          <span [style.background]="string2HexCodeColor.stringToColor(text, -0.5)">____</span>
+        </td>
+      </tr>
+    </table>
+
+</div>
