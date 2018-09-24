@@ -1,10 +1,4 @@
-th{
-    padding:20px
-   }
-   
-   td{
-     padding:10px
-   }
+
    pre {
      max-width: 350px;
      overflow-wrap: break-word;
@@ -23,3 +17,20 @@ th{
      margin-bottom: 50px;
    }
    
+
+   th.rotate {
+  /* Something you can count on */
+  height: 140px;
+  white-space: nowrap;
+}
+
+th.rotate{
+  transform: 
+    /* Magic Numbers */
+    translate(40px, 51px)
+    /* 45 is really 360 - 45 */
+    rotate(280deg);
+}
+th.rotate{
+  border-bottom: 1px solid black;
+}

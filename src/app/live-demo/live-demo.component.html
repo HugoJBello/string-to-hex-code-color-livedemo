@@ -47,9 +47,18 @@
       <tr>
         <td>
           <pre>{{codeStringToColorShade4}}</pre>
+        <td>{{ string2HexCodeColor.stringToColor(text, 0.5)}}</td>
+        <td>
+          <span [style.background]="string2HexCodeColor.stringToColor(text, 0.5)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <pre>{{codeStringToColorShade3}}</pre>
+        </td>
         <td>{{ string2HexCodeColor.stringToColor(text, 0.2)}}</td>
         <td>
-          <span [style.background]="string2HexCodeColor.stringToColor(text, 0.2)">____</span>
+          <span [style.background]="string2HexCodeColor.stringToColor(text, 0.2)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
         </td>
       </tr>
       <tr>
@@ -58,16 +67,7 @@
         </td>
         <td>{{ string2HexCodeColor.stringToColor(text)}}</td>
         <td>
-          <span [style.background]="string2HexCodeColor.stringToColor(text)">____</span>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <pre>{{codeStringToColorShade3}}</pre>
-        </td>
-        <td>{{ string2HexCodeColor.stringToColor(text, 0)}}</td>
-        <td>
-          <span [style.background]="string2HexCodeColor.stringToColor(text, 0)">____</span>
+          <span [style.background]="string2HexCodeColor.stringToColor(text)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
         </td>
       </tr>
       <tr>
@@ -76,7 +76,7 @@
         </td>
         <td>{{ string2HexCodeColor.stringToColor(text, -0.2)}}</td>
         <td>
-          <span [style.background]="string2HexCodeColor.stringToColor(text, -0.2)">____</span>
+          <span [style.background]="string2HexCodeColor.stringToColor(text, -0.2)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
         </td>
       </tr>
       <tr>
@@ -85,9 +85,34 @@
         </td>
         <td>{{ string2HexCodeColor.stringToColor(text, -0.5)}}</td>
         <td>
-          <span [style.background]="string2HexCodeColor.stringToColor(text, -0.5)">____</span>
+          <span [style.background]="string2HexCodeColor.stringToColor(text, -0.5)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
         </td>
       </tr>
     </table>
+    <br>
+    <br>
+    <h4>Examples whith shading</h4>
+    by using the second parameter in the function stringToColor we can shade the color. This is a syntax example
+    <br>
+    <br>
+    <pre style=" text-align: center;">string2HexCodeColor.stringToColor(text, -0.5)</pre>
 
-</div>
+    Positive inputs will make the color lighter, whereas negative inputs will make it darker.
+
+    <div style="overflow: scroll;max-width: 100;">
+      <table class="table">
+        <tr>
+          <th class="rotate" style="padding-left:25px">text</th>
+          <th class="rotate" *ngFor="let shade of shades">
+            {{shade}}
+          </th>
+        </tr>
+        <tr *ngFor="let text of textSample">
+          <td>"{{text}}"</td>
+          <td *ngFor="let shade of shades">
+            <span [style.background]="string2HexCodeColor.stringToColor(text, shade)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
